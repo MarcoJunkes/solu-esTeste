@@ -1,0 +1,5 @@
+SELECT c.id_cliente, c.razao_social, t.numero 
+FROM Clientes c 
+JOIN Telefones t ON c.id_cliente = t.id_cliente
+JOIN Estados e ON c.id_estado = e.id_estado
+WHERE e.sigla = 'SP';
